@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #screen {
+            width: 100%;
+            height: 800px;
+            border: 1px solid red;
+            background-color: rgb(240,242,245);
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        .top {
+            width: 30%;
+            height: 120px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .top >img {
+            width: 70%;
+        }
+        .bottom {
+            width: 30%;
+            height: 600px;
+            border: 1px solid white;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px 2px rgb(161, 156, 156);
+        }
+        .head {
+            width: 100%;
+            height: 85px;
+            border-bottom: 1px solid rgb(214, 208, 208);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .head >h3 {
+            font-weight: lighter;
+            font-family: sans-serif;
+            margin: 8px 0px ;
+            font-size: 16px;
+        }
+        .head >h2 {
+            font-family: sans-serif;
+            margin: 15px 0px 0px;
+        }
+        .add {
+            width: 100%;
+            height: 250px;
+            /* border: 1px solid black; */
+        }
+        .add >form {
+            width: 100%;
+            height: 250px;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 15px 0px;
+        }
+        .add >form >input {
+            width: 80%;
+            height: 40px;
+            outline: none;
+            font-size: 16px;
+            /* margin: px 0px 0px 0px; */
+        }
+        .para {
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .para >p {
+            width: 95%;
+            height: 35px;
+            /* border: 1px solid red; */
+            font-size: 12px;
+            font-family: sans-serif;
+            margin: 2px;
+            color: rgb(103, 100, 100);
+        }
+        .para >p >span {
+            color: rgb(88, 88, 251);
+            cursor: pointer;
+        }
+        .para >p >span:hover {
+            text-decoration: underline;
+        }
+        .but {
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .but >button {
+            width: 50%;
+            height: 40px;
+            background-color: rgb(0,164,0);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .all {
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .all >h3 {
+            font-family: sans-serif;
+            font-weight: lighter;
+            color: rgb(24,119,243);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div class="top">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"/>
+        </div>
+        <div class="bottom">
+            <div class="head">
+                <h2>Create a new account</h2>
+                <h3>It's quick and easy.</h3>
+            </div>
+            <div class="add">
+                <form>
+                    <input type="text" placeholder="Your Name here "/><br>
+                    <input type="email" placeholder="Your Email here "/><br>
+                    <input type="password" placeholder="Your Password here "/><br>
+                    <input type="password" placeholder="Your ConfirmPassword here "/><br>
+                </form>
+            </div>
+            <div class="para">
+                <p>People who use our service may have uploaded your contact information to Facebook.<span> Learn more.</span></p>
+                <p>By clicking Sign Up, you agree to our <span>Terms, Privacy Policy and Cookies Policy.</span> You may receive SMS notifications from us and can opt out at any time.</p>
+            </div>
+            <div class="but">
+                <button>Register</button>
+            </div>
+            <div class="all">
+                <h3 onclick="window.location.href = './FBLogin.html'">Already have an account?</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
