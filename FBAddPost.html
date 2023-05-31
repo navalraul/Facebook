@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="addpost(event)">
+        <label>Post Name</label><br>
+        <input type="text" id="pname"/><br>
+        <label>Post content</label><br>
+        <input type="text" id="pcont"/><br>
+        <label>Post Image url</label><br>
+        <input type="text" id="pimage"/><br>
+        <input type="submit"/><br>
+    </form>
+
+
+    <script>
+        function addpost(event){
+            event.preventDefault();
+            // alert("post adding...")
+            var postName = document.getElementById("pname").value;
+            var postCont = document.getElementById("pcont").value;
+            var postImage = document.getElementById("pimage").value;
+            var product = {postName,postCont,postImage};
+
+            var LS =JSON.parse (localStorage.getItem("Fbposts")) || [];
+            LS.push(product);
+
+            localStorage.setItem("Fbposts",JSON.stringify(LS));
+
+            alert("Post added successfully.")
+        }
+    </script>
+</body>
+</html>
